@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>data natives vienna</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-blue-yellow">
+		<div class="reveal">
+			<div class="slides">
+				<section class="stack" data-id="93f8beee3e188ce0f7bf8ada9818a4d7"><section data-id="60f5fa94e699c6cafa533073ee1d8a23"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 118px; height: auto;" data-block-id="2409d8d482e79e71e264437c62fb4f8c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Building kubernetes operators</h1>
+
+<p>using                        </p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="326ced8ae3d388c1f1803b2c2e718a66" style="height: auto; min-width: 30px; min-height: 30px; width: 454px; left: 253px; top: 472px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Zain Malik</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 78px; height: 81px; left: 441px; top: 524px;" data-block-id="926df7559b322f74163602f3e65af8b8"><div class="sl-block-content" style="z-index: 13;"><img style="left: -4px; top: -4px; width: 85px; height: 87px;" data-natural-width="154" data-natural-height="158" data-crop-x="0.047619" data-crop-y="0.047705" data-crop-width="0.916667" data-crop-height="0.929039" data-lazy-loaded="" data-src="data-natives-vienna/f14c792a895e617c3e5815c3efc7eb8f.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 172px; height: 43px; left: 452px; top: 249px;" data-block-id="7de4a6c0201974732e22d035868f66a2"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1536" data-natural-height="384" data-lazy-loaded="" data-src="data-natives-vienna/37c9989366f251976e28cfd2cf82f7f5.png"></div></div></section><section data-id="a6aea44a1130762bf677404808edbf73"><div class="sl-block" data-block-type="text" data-block-id="259a74249185aac2101b5006d0a438b0" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; color: rgb(255, 255, 255); text-align: center;" data-animation-type="slide-up" data-animation-trigger-id="self">
+<h1>Introduction</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ad59cac927771480f6696ad255110b49" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 251px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="slide-left">
+<ul>
+	<li><span style="font-size:1.2em">Software Engineer</span></li>
+	<li><span style="font-size:1.2em">Product Owner in Data Services </span></li>
+	<li><span style="font-size:1.2em">Data Engineering and Platform Services from almost ~9 years</span></li>
+</ul>
+</div></div></section><section data-id="edb9181f10909495706ca67a093ef89f"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 70px;" data-block-id="0ca01df8b5ce838cd94704da35ef732f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="slide-up" data-animation-trigger-id="self">
+<h1>AGENDA</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 80px; top: 250px;" data-block-id="b0b1eaa483b226280603d6d86de40c81"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="slide-left">
+<ul>
+	<li><span style="font-size:1.2em">Kubernetes Operators</span></li>
+	<li><span style="font-size:33.6px">Running data-services in Kubernetes</span></li>
+	<li>
+<span style="font-size:1.2em">KUDO</span>
+	<ul>
+		<li><span style="font-size:1.2em">DEMO: Apache Kafka ​</span></li>
+		<li><span style="font-size:1.2em">Getting Involved</span></li>
+	</ul>
+	</li>
+</ul>
+</div></div></section></section><section class="stack" data-id="8fc8bb649a2a79ed0c3b10bfad67909d"><section data-id="084a6c9f971b42ab4979114e66100dca"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="f32997d3a12b883e9558b4ba5c5ec6ad"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>KUBERNETES OPERATORS</h1>
+</div></div></section><section data-id="9e34332b07d708fd636153a329834ecd"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 174px; left: 77px; top: 106px;" data-block-id="24b032c24c0dc6a6824711df734b7f14"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div></section><section data-id="d0a2cca230d8cd103b9512bca1f28175"><div class="sl-block" data-block-type="image" style="width: 806px; height: 174px; left: 77px; top: 106px; min-width: 4px; min-height: 4px;" data-block-id="36c3480b1d07f17141d7e1e39e1d5551"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 576px; height: 314px; left: 209px; top: 294px;" data-block-id="0d96d9af92cf7261ef2f65775df51181"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="750" data-natural-height="408" data-lazy-loaded="" data-src="data-natives-vienna/9a2ba19624a62f1119fedebfe8262851.gif"></div></div></section><section data-id="333bc341421f1277fa83232c8f2ab446"><div class="sl-block" data-block-type="image" style="width: 806px; height: 174px; left: 77px; top: 106px; min-width: 4px; min-height: 4px;" data-block-id="fd9a4ba12f826cea72a62a8889cbace0"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 492px; height: 118px; left: 295px; top: 221px;" data-block-id="63b29a1bf1c254c9f81174c6d4cf5e9e"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1245" data-natural-height="298" data-lazy-loaded="" data-src="data-natives-vienna/bea85939a63c7187c34f104efa1e9108.png"></div></div></section><section data-id="1148cc89bed12a8987b0807ebadf7b89"><div class="sl-block" data-block-type="image" style="width: 806px; height: 174px; left: 77px; top: 106px; min-width: 4px; min-height: 4px;" data-block-id="4a77df0a46d9e751380fc0368f414053"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 492px; height: 118px; left: 295px; top: 221px; min-width: 4px; min-height: 4px;" data-block-id="6de2346e39b8b70a13a856e3341b4361"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1245" data-natural-height="298" data-lazy-loaded="" data-src="data-natives-vienna/bea85939a63c7187c34f104efa1e9108.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 725px; height: 136px; left: 118px; top: 389px;" data-block-id="4f0d7f55af8fafdf2de10f6b73e96d22"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="725" data-natural-height="136" style="" data-lazy-loaded="" data-src="data-natives-vienna/5b1603a6434cf741dfa1bd0023003936.png"></div></div></section><section data-id="746e99074c51f351624bd01d0da48da3"><div class="sl-block" data-block-type="image" style="width: 806px; height: 174px; left: 77px; top: 106px; min-width: 4px; min-height: 4px;" data-block-id="318bebd0585c879dbb4835d17391e96d"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 492px; height: 118px; left: 295px; top: 221px; min-width: 4px; min-height: 4px;" data-block-id="928018fd4531f233ba0969285470a3a3"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1245" data-natural-height="298" data-lazy-loaded="" data-src="data-natives-vienna/bea85939a63c7187c34f104efa1e9108.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="58ad872d753f7d9f67def3e883fe9ae5" style="height: auto; min-width: 30px; min-height: 30px; width: 370px; left: 160px; top: 403px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left"><span style="font-size:1.2em">Examples:</span></p>
+
+<ul>
+	<li style="text-align:left"><span style="font-size:1.2em">etcd operator</span></li>
+	<li style="text-align:left"><span style="font-size:1.2em">prometheus operator</span></li>
+</ul>
+</div></div></section><section data-id="a9d6d02cfb3b95810989ff2874b5f677"><div class="sl-block" data-block-type="image" style="width: 806px; height: 174px; left: 77px; top: 106px; min-width: 4px; min-height: 4px;" data-block-id="7105a80cb3a1c485d7dcc1068af7eea9"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 492px; height: 118px; left: 295px; top: 221px; min-width: 4px; min-height: 4px;" data-block-id="f41a4682946e611298a24b358ce5a48c"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1245" data-natural-height="298" data-lazy-loaded="" data-src="data-natives-vienna/bea85939a63c7187c34f104efa1e9108.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 370px; left: 160px; top: 403px;" data-block-id="9cbd14b158f04d35509644e41a55c7b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left"><span style="font-size:1.2em">Examples:</span></p>
+
+<ul>
+	<li style="text-align:left"><span style="font-size:1.2em">etcd operator</span></li>
+	<li style="text-align:left"><span style="font-size:1.2em">prometheus operator</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1f36c3a69afe3d25c11cb2dd056eab59" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 605px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>all operational knowledge we need to run etcd or prometheus is packed inside these operators</p>
+</div></div></section><section data-id="84c831e24ad163cba5512b31193a47bd"><div class="sl-block" data-block-type="image" style="width: 806px; height: 174px; left: 74px; top: 23px; min-width: 4px; min-height: 4px;" data-block-id="8f22c88981a24bf3d03f0291c5c194cb"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 492px; height: 118px; left: 298px; top: 151px; min-width: 4px; min-height: 4px;" data-block-id="2bbfbf293cedf292d70740e73b89ac18"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1245" data-natural-height="298" data-lazy-loaded="" data-src="data-natives-vienna/bea85939a63c7187c34f104efa1e9108.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 167px; top: 277px;" data-block-id="382cb646c2fdfac167a4e53e3746f42b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li>
+	<p><span style="color:#FFFFFF">Orchestrate stateful applications using K8s API</span></p>
+	</li>
+	<li>
+	<p><span style="color:#FFFFFF">Extend API using Custom Resource Definitions</span></p>
+	</li>
+	<li>
+	<p><span style="color:#FFFFFF">Encode domain specific operational knowledge</span></p>
+	</li>
+	<li>
+	<p><span style="color:#FFFFFF">Upgrades</span></p>
+	</li>
+	<li>
+	<p><span style="color:#FFFFFF">Failure and Recovery Scenarios</span></p>
+	</li>
+	<li>
+	<p><span style="color:#FFFFFF">Scaling up / down</span></p>
+	</li>
+	<li>
+	<p><span style="color:#FFFFFF">Purpose built per application</span></p>
+	</li>
+	<li>
+	<p><span style="color:#FFFFFF">“Kubernetes is an Operations API”:</span></p>
+
+	<ul>
+		<li>
+		<p><a href="https://blog.atomicinc.com/2018/05/23/kubernetes-is-an-operations-api/" target="_blank"><span style="color:#FFFFFF">https://blog.atomicinc.com/2018/05/23/kubernetes-is-an-operations-api/</span></a></p>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section></section><section class="stack" data-id="4333a7b240cd82bbdd982d44c4538103"><section data-id="51878a051b8384aa858a5aa87db4803b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="5fedefad62f4f8627161c228ffb18cd3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>DATA SERVICES</h1>
+</div></div></section><section data-id="a247b29b5c5987b2d3709d1a66c8bb59"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 77px; height: auto;" data-block-id="bfbae24610bad03bf3bb2d582967c8c7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>DATA SERVICES</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 261px; height: 78px; left: 129px; top: 231px;" data-block-id="4978e7cd7292535e9a8449de8e2449c2"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="975" data-natural-height="291" style="" data-lazy-loaded="" data-src="data-natives-vienna/6daba3358d4fda546f2b93fec5ed96df.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 208px; height: 139px; left: 456px; top: 186px;" data-block-id="51774e5bb559886c3da6eccfea7f161f"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1200" data-natural-height="804" data-lazy-loaded="" data-src="data-natives-vienna/564309d6e905ac96481db86dc7ea2ec9.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 311px; height: 144px; left: 212px; top: 346px;" data-block-id="4d67ce519c8242e919117cca84a89e54"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="2500" data-natural-height="1157" data-lazy-loaded="" data-src="data-natives-vienna/28e9fdbbe75c6e60177ecb59af6216bf.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 223px; height: 116px; left: 546px; top: 350px;" data-block-id="946f589a01f76e9ef54c8805fc174b59"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="2000" data-natural-height="1041" data-lazy-loaded="" data-src="data-natives-vienna/b11cf94802748b86e9236c5dd995dc0f.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 166px; height: 81px; left: 129px; top: 479px;" data-block-id="ff93fb0516d11ba9618314d7b65afa7a"><div class="sl-block-content" style="z-index: 16;"><img data-natural-width="1200" data-natural-height="587" style="" data-lazy-loaded="" data-src="data-natives-vienna/86b9e1f4cec80bdbc996e147bde60ceb.png"></div></div></section></section><section class="stack" data-id="17954fe7a34163f67faa29a272811917"><section data-id="ae0a4c0c6c0d0faec49c8f388749c09e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 85px; top: 184px; height: auto;" data-block-id="fb56d00f4fceee5afbfb908c3c2be758"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>DATA SERVICES<br>
+on</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 174px; left: 70px; top: 277px;" data-block-id="239dfe058c32772ba08895c86216837a"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div></section><section data-id="22225d0a5246950b26361581209f8935"><div class="sl-block" data-block-type="text" style="width: 806px; left: 85px; top: 13px; height: auto;" data-block-id="ce56e77460f22017de2c3813366700d3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>DATA SERVICES<br>
+on</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 806px; height: 174px; left: 70px; top: 106px; min-width: 4px; min-height: 4px;" data-block-id="54d8fd0b3e6e1a8c28188f3c98f6d368"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="87a0a33bfe90529c7f95ccaa3461bb5e" style="min-width: 4px; min-height: 4px; width: 381px; height: 390px; left: 290px; top: 280px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="960" data-natural-height="982" data-src="data-natives-vienna/b3bf8397d9a0551294cbd2081d6a5677.png"></div></div></section><section data-id="dcf1372795e6efe9557ea43e1c3fd011"><div class="sl-block" data-block-type="image" data-block-id="cbf99ea151f63e6ac1cb122578933c45" style="min-width: 4px; min-height: 4px; width: 806px; height: 201px; left: 77px; top: 250px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1342" data-natural-height="334" data-lazy-loaded="" data-src="data-natives-vienna/d675001b326ab6f1b0ce7e380ee6cac8.png"></div></div></section><section data-id="efc9b367b4a487aecfcea6543abbe7b3"><div class="sl-block" data-block-type="image" style="width: 806px; height: 201px; left: 77px; top: 128px; min-width: 4px; min-height: 4px;" data-block-id="9528baeba3328b906d9be6804a47fcbf"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1342" data-natural-height="334" data-lazy-loaded="" data-src="data-natives-vienna/d675001b326ab6f1b0ce7e380ee6cac8.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 619px; height: 266px; left: 171px; top: 364px;" data-block-id="9d839c778c9134da04f9b11f68f9cfc6"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="838" data-natural-height="360" data-lazy-loaded="" data-src="data-natives-vienna/f950db17821408a8ea7fea414ff6f97a.png"></div></div></section><section data-id="e0ef164754093a906c17d4bdd662ab78"><div class="sl-block" data-block-type="image" style="width: 619px; height: 266px; left: 171px; top: 70px; min-width: 4px; min-height: 4px;" data-block-id="d7d697464fe6f8493e908a5eba98a2a7"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="838" data-natural-height="360" data-lazy-loaded="" data-src="data-natives-vienna/f950db17821408a8ea7fea414ff6f97a.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 174px; left: 77px; top: 373px;" data-block-id="441667ff3f6dc4e2c1f5e399bf43e578"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 635px; height: 152px; left: 288px; top: 490px;" data-block-id="e801e11331f2073061f98c88f2699623"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1245" data-natural-height="298" data-lazy-loaded="" data-src="data-natives-vienna/bea85939a63c7187c34f104efa1e9108.png"></div></div></section><section data-id="dc3a9ed5803f66725b0b0e5b4841a914"><div class="sl-block" data-block-type="image" style="width: 806px; height: 174px; left: 80px; top: 39px; min-width: 4px; min-height: 4px;" data-block-id="4e5228fbe1eee15c728272ba1fc2751f"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 635px; height: 152px; left: 291px; top: 156px; min-width: 4px; min-height: 4px;" data-block-id="ab88eb8f5b7605f88b160e2e680c651d"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1245" data-natural-height="298" data-lazy-loaded="" data-src="data-natives-vienna/bea85939a63c7187c34f104efa1e9108.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="add12b24114da6425c1c4edd487f3042" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 200px; top: 333px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li>
+	<p>Operators require deep knowledge of Kubernetes internals</p>
+	</li>
+	<li>
+	<p>Significant software development undertaking</p>
+	</li>
+	<li>
+	<p>May require (10s of) thousands of lines of code</p>
+	</li>
+</ul>
+</div></div></section><section data-id="5dfbda9b251fb632ebd5ff0385d9c230"><div class="sl-block" data-block-type="image" style="width: 806px; height: 174px; left: 80px; top: 39px; min-width: 4px; min-height: 4px;" data-block-id="5efa6a6447700e67c1404c72b3ba7140"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1727" data-natural-height="373" data-lazy-loaded="" data-src="data-natives-vienna/f85feddeb01fcbf895d8861375defbde.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 635px; height: 152px; left: 291px; top: 156px; min-width: 4px; min-height: 4px;" data-block-id="824c9f22423fa2cfce3874dd6e8a27bc"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1245" data-natural-height="298" data-lazy-loaded="" data-src="data-natives-vienna/bea85939a63c7187c34f104efa1e9108.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 266px; left: 80px; top: 654px;" data-block-id="e5b60a08833ed5b79e94b2eb472711ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>prometheus operator</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="b09c147d5fb92fec1284eed6c64fc9a0" style="min-width: 4px; min-height: 4px; width: 320px; height: 321px; left: 53px; top: 333px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="862" data-natural-height="864" style="" data-lazy-loaded="" data-src="data-natives-vienna/ed067c9a5c88655561e74af94922c451.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6515470fc6ceb615ad646fc5c972e5ae" style="height: auto; min-width: 30px; min-height: 30px; width: 608px; left: 206px; top: 672px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><span style="font-size:0.7em">source: <a href="https://codetabs.com/count-loc/count-loc-online.html" target="_blank">https://codetabs.com/count-loc/count-loc-online.html</a></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="5d4ec84e21531e5d1b8698bcadfac1ec" style="min-width: 4px; min-height: 4px; width: 345px; height: 321px; left: 581px; top: 330px;"><div class="sl-block-content" style="z-index: 16;"><img data-natural-width="900" data-natural-height="838" style="" data-lazy-loaded="" data-src="data-natives-vienna/8ee87d8f0a0a2709416fee8ee2a9c269.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 266px; left: 620px; top: 651px;" data-block-id="4360e66eaf39f563aa3967d0f4e3e108"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p>etcd operator</p>
+</div></div></section></section><section class="stack" data-id="e3a3eafcadf7820448d5998082d962b6"><section data-id="31a34dde85c7e9b7b8034790290bb2c2"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 202px; left: 77px; top: 179px;" data-block-id="db10ce5344fe98535de4b292196d5404"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1536" data-natural-height="384" data-lazy-loaded="" data-src="data-natives-vienna/37c9989366f251976e28cfd2cf82f7f5.png"></div></div></section><section data-id="33a86107ea0428375450704c9bc0d8d8"><div class="sl-block" data-block-type="image" style="width: 806px; height: 202px; left: 77px; top: 16px; min-width: 4px; min-height: 4px;" data-block-id="8ab6ac83474b81dfe90f2a14a6feec6f"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1536" data-natural-height="384" data-lazy-loaded="" data-src="data-natives-vienna/37c9989366f251976e28cfd2cf82f7f5.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f1caebf6f174b4daea1595140d0124e6" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 281px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="color:rgb(83, 86, 90)">
+	<p><span style="color:#FFFFFF">Kubernetes Universal Declarative Operator</span></p>
+
+	<ul>
+		<li style="color:rgb(83, 86, 90)">
+		<p><span style="color:#FFFFFF">Universal operator configured via YAML</span></p>
+		</li>
+		<li style="color:rgb(83, 86, 90)">
+		<p><span style="color:#FFFFFF">Encodes commonality and reuse between lifecycle operations</span></p>
+		</li>
+		<li style="color:rgb(83, 86, 90)">
+		<p><span style="color:#FFFFFF">Provide ‘Plans’ as a way of sequencing and abstracting</span></p>
+		</li>
+	</ul>
+	</li>
+	<li style="color:rgb(83, 86, 90)">
+	<p><span style="color:#FFFFFF">OS project licensed as Apache 2.0</span></p>
+	</li>
+	<li style="color:rgb(83, 86, 90)">
+	<p><span style="color:#FFFFFF">Open Development model</span></p>
+	</li>
+</ul>
+</div></div></section><section data-id="4548cfaf0424ceee08dd4725fb683de6"><div class="sl-block" data-block-type="image" style="width: 806px; height: 202px; left: 77px; top: 16px; min-width: 4px; min-height: 4px;" data-block-id="1e0e4287a691b137e424e6c8dfd25e6b"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1536" data-natural-height="384" data-lazy-loaded="" data-src="data-natives-vienna/37c9989366f251976e28cfd2cf82f7f5.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 280px;" data-block-id="7e7ee05a3c93c5803a4c7e95a5fb4e72"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>join #kudo</p>
+
+<p>in <a href="https://slack.k8s.io/" target="_blank">https://slack.k8s.io/</a></p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9eb2af76fed68e60f32b96c0aeb97052" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 420px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><a href="https://github.com/kudobuilder/kudo" target="_blank">https://github.com/kudobuilder/kudo</a></p>
+</div></div></section><section data-id="b4b81cb2b03f5fe248a74ae9ac481176"><div class="sl-block" data-block-type="image" style="width: 806px; height: 202px; left: 77px; top: 16px; min-width: 4px; min-height: 4px;" data-block-id="e16df651287e407412b26f2861daec6e"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1536" data-natural-height="384" data-lazy-loaded="" data-src="data-natives-vienna/37c9989366f251976e28cfd2cf82f7f5.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="d06bedd8da201414679a178968d84fc2" style="min-width: 4px; min-height: 4px; width: 806px; height: 392px; left: 77px; top: 232px;"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="2500" data-natural-height="1215" data-lazy-loaded="" data-src="data-natives-vienna/2ba69f8bc17ff93126aec046577353f7.png"></div></div></section></section><section data-id="42859c5b48b0d27e2556903f5a561e36"><div class="sl-block" data-block-type="image" style="width: 806px; height: 202px; left: 87px; top: 39px; min-width: 4px; min-height: 4px;" data-block-id="5404bf810f66557121a140819201e2ae"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1536" data-natural-height="384" data-lazy-loaded="" data-src="data-natives-vienna/37c9989366f251976e28cfd2cf82f7f5.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7d0d47b45adcc798c77050fbbf36c2bc" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 262px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Concepts</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="09926ad9dd3ecaf3c8a99b5dc50fbc0b" style="min-width: 4px; min-height: 4px; width: 620px; height: 358px; left: 170px; top: 305px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1140" data-natural-height="658" data-lazy-loaded="" data-src="data-natives-vienna/00ba44501c12c47fddb95121b2c8dd56.png"></div></div></section><section class="stack" data-id="8018e1cb0c6430aee6970c5c5d7343ac"><section data-id="20d274c17fbe059f583ef79a55cc02d3"><div class="sl-block" data-block-type="image" style="width: 332px; height: 83px; left: 150px; top: 309px; min-width: 4px; min-height: 4px;" data-block-id="9464fd3ffa97709c38c13123857d0bfb"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1536" data-natural-height="384" data-lazy-loaded="" data-src="data-natives-vienna/37c9989366f251976e28cfd2cf82f7f5.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 345px; height: 103px; left: 506px; top: 299px;" data-block-id="f0c0c856d7c0c50ea84376e10ff534aa"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="975" data-natural-height="291" data-lazy-loaded="" data-src="data-natives-vienna/6daba3358d4fda546f2b93fec5ed96df.png"></div></div></section><section data-id="421e69d526f344230992da5318880787"><div class="sl-block" data-block-type="image" style="width: 332px; height: 83px; left: 112px; top: 29px; min-width: 4px; min-height: 4px;" data-block-id="b60255d2358066b63d68cd3a7e229d76"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1536" data-natural-height="384" data-lazy-loaded="" data-src="data-natives-vienna/37c9989366f251976e28cfd2cf82f7f5.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 345px; height: 103px; left: 468px; top: 19px; min-width: 4px; min-height: 4px;" data-block-id="2ffd601f1e8e3fb9adea10753dd488d6"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="975" data-natural-height="291" data-lazy-loaded="" data-src="data-natives-vienna/6daba3358d4fda546f2b93fec5ed96df.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 480px; height: 270px; left: 240px; top: 215px;" data-block-id="d8b2153644df5265182fcbd532ac0eb3"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="480" data-natural-height="270" data-lazy-loaded="" data-src="data-natives-vienna/03099c88ccc254703ec9f48275e0b31c.gif"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5223adcad08f2c8626c48bef7b8985b3" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 174px; top: 515px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>DEMO</p>
+</div></div></section><section data-id="416b8bc74bdfb2491869022eccb9e40b"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 228px; height: 57px; left: 141px; top: 121px;" data-block-id="cb630aae38309d2d4cbec53636bc7235"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1536" data-natural-height="384" data-lazy-loaded="" data-src="data-natives-vienna/37c9989366f251976e28cfd2cf82f7f5.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e722c6eb3bc9c6221569c467ffeebcbb" style="height: auto; min-width: 30px; min-height: 30px; width: 249px; left: 400px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><a href="https://kudo.dev/" target="_blank"><span style="color:#000000">https://kudo.dev/</span></a></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 104px; height: 102px; left: 199px; top: 178px;" data-block-id="36d672df87624dca79d988b0a253e781"><div class="sl-block-content" style="z-index: 18;"><img style="" data-natural-width="480" data-natural-height="469" data-lazy-loaded="" data-src="data-natives-vienna/0bcffc154f0469711985466a60d83be8.gif"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0757dd5dd44680371b4eef84ba537bfa" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 351px; top: 218px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><a href="https://github.com/kudobuilder/kudo" target="_blank"><span style="color:#000000">https://github.com/kudobuilder/kudo</span></a></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 198px; height: 99px; left: 160px; top: 254px;" data-block-id="c2cfe156210c26639af31dc9c1f735e9"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="500" data-natural-height="250" data-lazy-loaded="" data-src="data-natives-vienna/829083a51b53f49db840ed770c3e6851.gif"></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="102b6950cc9a9a214793ff0c8d19fee8" style="min-width: 4px; min-height: 4px; width: 878px; height: 550px; left: 31px; top: 42px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 878 550"><rect width="878" height="550" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ecc0da3b1a3088e8530b9877e287ee75" style="height: auto; min-width: 30px; min-height: 30px; width: 342px; left: 404px; top: 304px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><span style="color:#000000">#kudo </span><a href="http://slack.k8s.io/" target="_blank"><span style="color:#000000">http://slack.k8s.io/</span></a></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9e1c1448155b814d78a5f225e9d0f267" style="height: auto; min-width: 30px; min-height: 30px; width: 722px; left: 133px; top: 366px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p><a href="https://groups.google.com/forum/#!forum/kudobuilder" target="_blank"><span style="color:#000000">https://groups.google.com/forum/#!forum/kudobuilder</span></a></p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5a036c0d9afb37e452057fb6f7654c02" style="height: auto; min-width: 30px; min-height: 30px; width: 671px; left: 145px; top: 472px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19;">
+<p><span style="color:#000000">Community Meeting - weekly Thursdays 10am PT</span></p>
+</div></div></section></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1581151,"slug":"data-natives-vienna","title":"data natives vienna","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/1ee9bd8e9a3a8ed0081fa39787432b1f/thumb.jpg?1567458943","view_count":0,"user":{"id":837692,"username":"zainmalik-1","name":"Zain Malik","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":822768,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"concave","transition":"default","theme_id":null,"theme_font":"overpass2","theme_color":"blue-yellow","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":34,"rtl":false,"version":2,"collaborative":true,"deck_user_editor_limit":1,"data_updated_at":1567517626946,"font_typekit":null,"font_google":null,"time_limit":null,"upsizing_enabled":true,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "default",
+				backgroundTransition: "concave",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js' },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
